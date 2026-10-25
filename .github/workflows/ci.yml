@@ -1,14 +1,20 @@
+
 name: CI
 
-on : push
+on: push
 
 jobs:
   check:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: say hello
         run: echo "Hello from github actions"
+
       - name: get the code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
+
       - name: list the files
-        run: ls     
+        run: ls
+
+      - name: check the home page has a heading
+        run: grep "<h1>" page.html
