@@ -10,5 +10,5 @@ jobs:
         run: echo "Hello from github actions"
       - name: get the code
         uses: actions/checkout@v7
-      - name:list the files
+      - name: list the files
         run: ls     
